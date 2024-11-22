@@ -1,0 +1,205 @@
+/* Geral */
+body {
+  background: linear-gradient(to bottom, #000000, #002244, #1C304A);
+  color: #E0E0E0;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Garante que o fundo cubra a tela inteira */
+  background-size: cover; /* Impede repetições */
+  background-attachment: fixed; /* Faz o fundo permanecer fixo ao rolar */
+}
+
+
+h1, h2 {
+  color: #00BFA5;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+a {
+  color: #00BFA5;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00FF99;
+}
+
+/* Botões Neon */
+.neon-btn {
+  background: #00796B;
+  border: none;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+.neon-btn:hover {
+  background: #00BFA5;
+  color: #000000;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 1);
+}
+
+/* Sidebar */
+#sidebarToggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  color: #00BFA5;
+  cursor: pointer;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  z-index: 1100;
+}
+
+#sidebarToggle:hover {
+  color: #00FF99;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 1);
+}
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  top: 0;
+  background: #1E1E30;
+  padding-top: 20px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-header {
+  text-align: center;
+  padding: 20px;
+  background: #2A2A40;
+  color: #00FF99;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+.sidebar ul.components li a {
+  padding: 10px;
+  font-size: 1rem;
+  display: block;
+  color: #E0E0E0;
+}
+
+.sidebar ul.components li a:hover {
+  background: #575757;
+  color: #00BFA5;
+}
+
+
+/* Carrossel */
+.lightning-icon {
+  background: none;
+  border: none;
+  color: #FFA500;
+  font-size: 2rem;
+  text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.8);
+  cursor: pointer;
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.carousel-item.active { 
+  display: block; transform: translateX(0%); 
+}
+
+.lightning-icon:hover {
+  transform: scale(1.2);
+  text-shadow: 0px 0px 20px rgba(255, 165, 0, 1);
+}
+
+.card {
+  background-color: #1F1F30; /* Fundo dos cards ajustado para combinar com o tema escuro */
+  color: #E0E0E0; /* Cor do texto ajustada para contraste adequado */
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px #1C304A; /* Sombra suave */
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 255, 209, 0.3); /* Sombra mais forte ao passar o mouse */
+}
+
+/* Busca FAQ */
+#searchBar {
+  background-color: #2A2A40;
+  border: 1px solid #575757;
+  color: #E0E0E0;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+#searchBar::placeholder {
+  color: #B0B0B0;
+}
+
+#faqList li {
+  margin-bottom: 10px;
+}
+
+/*Imagens*/
+.img-responsive {
+  max-width: 50%;
+  height: auto;
+}
+
+/* Conteúdo */
+#content {
+  margin-left: 250px;
+  margin-right: 200px; 
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+#content.shift {
+  margin-left: 250px; /* Ajusta espaço para a sidebar quando ativa */
+}
+
+/* Conteúdo dentro do #content */
+#content > header,
+#content > section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px; /* Define uma largura máxima para centralizar o texto */
+}
+
+/* Imagem responsiva */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Campo de texto padrão */
+input.form-control, textarea.form-control {
+  background-color: #1C304A; /* Cor de fundo */
+  color: #E0E0E0; /* Cor do texto */
+  border: 1px solid #4C4C60; /* Cor da borda */
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Foco no campo de texto */
+input.form-control:focus, textarea.form-control:focus {
+  background-color: #1C304A; /* Cor de fundo */
+  color: #E0E0E0; /* Cor do texto */
+  border-color: #00FFD1; /* Cor da borda ao focar */
+  outline: none;
+  box-shadow: 0 0 10px #1C304A; /* Sombra ao focar */
+}
+
+/* Label do formulário */
+label.form-label {
+  color: #E0E0E0; /* Cor do texto do label */
+}
